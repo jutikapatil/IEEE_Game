@@ -11,44 +11,48 @@
 </head>
 
 <body>
-  <h1 class="page-title">Mix-Or-Match</h1>
+
   <div class="overlay-text visible">Click to Start</div>
   <div id="game-over-text" class="overlay-text">
     GAME OVER
-    <span class="overlay-text-small">Click to Restart</span>
+    <span class="overlay-text-small" style="display:none">Click to Restart</span>
   </div>
-  <div id="victory-text" class="overlay-text">
+  <div id="victory-text" class="overlay-text" style="display:none">
     VICTORY
     <span class="overlay-text-small">Click to Restart</span>
   </div>
 
+  <button data-modal-target="#modal" style="display: none;">Open Modal</button>
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <div class="title"></div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body" id="GFG_DOWN">
+
+    </div>
+  </div>
+  <div id="overlay"></div>
+
   <div class="game-container">
-    <div class="game-info-container">
-      <div class="game-info">Time <span id="time-remaining">100</span></div>
-      <div class="game-info">Flips <span id="flips">0</span></div>
+    <div class="game-info-container " style="display: none;">
+      <div class="game-info"><span id="time-remaining"></span></div>
+      <div class="game-info"><span id="flips"></span></div>
     </div>
     <div class="card">
       <div class="card-back card-face">
-        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
+        <img class="spider" src="" />
       </div>
       <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/icons8-django-150.png" />
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back card-face">
-        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
-      </div>
-      <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/icons8-django-150.png" />
+        <img class="card-value" src="./Assets/Images/chariot.jpeg" />
       </div>
     </div>
     <div class="card">
       <div class="card-back card-face">
-        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
+        <img class="spider" src="" />
       </div>
       <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/icons8-flask-50.png" />
+        <img class="card-value" src="./Assets/Images/chariot.jpeg" />
       </div>
     </div>
     <div class="card">
@@ -56,7 +60,7 @@
         <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
       </div>
       <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/icons8-flask-50.png" />
+        <img class="card-value" src="./Assets/Images/chariot.jpeg" />
       </div>
     </div>
     <div class="card">
@@ -64,7 +68,23 @@
         <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
       </div>
       <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/icons8-java-48.png" />
+        <img class="card-value" src="./Assets/Images/chariot.jpeg" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="" />
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="./Assets/Images/death.jpeg" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="" />
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="./Assets/Images/death.jpeg" />
       </div>
     </div>
     <div class="card">
@@ -72,7 +92,7 @@
         <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
       </div>
       <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/icons8-java-48.png" />
+        <img class="card-value" src="./Assets/Images/death.jpeg" />
       </div>
     </div>
     <div class="card">
@@ -80,7 +100,23 @@
         <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
       </div>
       <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/icons8-java-eclipse-40.png" />
+        <img class="card-value" src="./Assets/Images/death.jpeg" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="" />
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="./Assets/Images/devil.jpeg" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="" />
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="./Assets/Images/devil.jpeg" />
       </div>
     </div>
     <div class="card">
@@ -88,7 +124,7 @@
         <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
       </div>
       <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/icons8-java-eclipse-40.png" />
+        <img class="card-value" src="./Assets/Images/devil.jpeg" />
       </div>
     </div>
     <div class="card">
@@ -96,8 +132,7 @@
         <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
       </div>
       <div class="card-front card-face">
-        <img class="card-value"
-          src="./Assets/Images/icons8-kotlin-a-cross-platform,-statically-typed,-general-purpose-programming-language-with-type-inference-48.png" />
+        <img class="card-value" src="./Assets/Images/devil.jpeg" />
       </div>
     </div>
     <div class="card">
@@ -105,8 +140,7 @@
         <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
       </div>
       <div class="card-front card-face">
-        <img class="card-value"
-          src="./Assets/Images/icons8-kotlin-a-cross-platform,-statically-typed,-general-purpose-programming-language-with-type-inference-48.png" />
+        <img class="card-value" src="./Assets/Images/emperor.jpeg" />
       </div>
     </div>
     <div class="card">
@@ -114,7 +148,7 @@
         <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
       </div>
       <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/icons8-php-48.png" />
+        <img class="card-value" src="./Assets/Images/emperor.jpeg" />
       </div>
     </div>
     <div class="card">
@@ -122,7 +156,7 @@
         <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
       </div>
       <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/icons8-php-48.png" />
+        <img class="card-value" src="./Assets/Images/emperor.jpeg" />
       </div>
     </div>
     <div class="card">
@@ -130,33 +164,7 @@
         <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
       </div>
       <div class="card-front card-face">
-        <img class="card-value"
-          src="./Assets/Images/icons8-python-an-interpreted,-high-level,-general-purpose-programming-language.-48.png" />
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back card-face">
-        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
-      </div>
-      <div class="card-front card-face">
-        <img class="card-value"
-          src="./Assets/Images/icons8-python-an-interpreted,-high-level,-general-purpose-programming-language.-48.png" />
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back card-face">
-        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
-      </div>
-      <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/icons8-react-native-50.png" />
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back card-face">
-        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
-      </div>
-      <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/icons8-react-native-50.png" />
+        <img class="card-value" src="./Assets/Images/emperor.jpeg" />
       </div>
     </div>
 
@@ -167,7 +175,7 @@
         <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
       </div>
       <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/icons8-sql-40.png" />
+        <img class="card-value" src="./Assets/Images/hermit.jpeg" />
       </div>
     </div>
     <div class="card">
@@ -175,19 +183,7 @@
         <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
       </div>
       <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/icons8-sql-40.png" />
-      </div>
-    </div>
-
-
-
-
-    <div class="card">
-      <div class="card-back card-face">
-        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
-      </div>
-      <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/icons8-swift-60.png" />
+        <img class="card-value" src="./Assets/Images/hermit.jpeg" />
       </div>
     </div>
     <div class="card">
@@ -195,7 +191,15 @@
         <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
       </div>
       <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/icons8-swift-60.png" />
+        <img class="card-value" src="./Assets/Images/hermit.jpeg" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="./Assets/Images/hermit.jpeg" />
       </div>
     </div>
 
@@ -205,8 +209,7 @@
         <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
       </div>
       <div class="card-front card-face">
-        <img class="card-value"
-          src="./Assets/Images/icons8-typescript-an-open-source-programming-language-developed-and-maintained-by-microsoft-48.png" />
+        <img class="card-value" src="./Assets/Images/hierophant.jpeg" />
       </div>
     </div>
     <div class="card">
@@ -214,8 +217,7 @@
         <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
       </div>
       <div class="card-front card-face">
-        <img class="card-value"
-          src="./Assets/Images/icons8-typescript-an-open-source-programming-language-developed-and-maintained-by-microsoft-48.png" />
+        <img class="card-value" src="./Assets/Images/hierophant.jpeg" />
       </div>
     </div>
 
@@ -225,7 +227,7 @@
         <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
       </div>
       <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/icons8-vue-js-48.png" />
+        <img class="card-value" src="./Assets/Images/hierophant.jpeg" />
       </div>
     </div>
     <div class="card">
@@ -233,7 +235,7 @@
         <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
       </div>
       <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/icons8-vue-js-48.png" />
+        <img class="card-value" src="./Assets/Images/hierophant.jpeg" />
       </div>
     </div>
 
@@ -245,7 +247,7 @@
         <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
       </div>
       <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/icons8-c++-144.png" />
+        <img class="card-value" src="./Assets/Images/justice.jpeg" />
       </div>
     </div>
     <div class="card">
@@ -253,20 +255,7 @@
         <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
       </div>
       <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/icons8-c++-144.png" />
-      </div>
-    </div>
-
-
-
-
-
-    <div class="card">
-      <div class="card-back card-face">
-        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
-      </div>
-      <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/icons8-angularjs-48.png" />
+        <img class="card-value" src="./Assets/Images/justice.jpeg" />
       </div>
     </div>
     <div class="card">
@@ -274,18 +263,7 @@
         <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
       </div>
       <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/icons8-angularjs-48.png" />
-      </div>
-    </div>
-
-
-
-    <div class="card">
-      <div class="card-back card-face">
-        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
-      </div>
-      <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/icons8-c-programming-48.png" />
+        <img class="card-value" src="./Assets/Images/justice.jpeg" />
       </div>
     </div>
     <div class="card">
@@ -293,25 +271,7 @@
         <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
       </div>
       <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/icons8-c-programming-48.png" />
-      </div>
-    </div>
-
-
-    <div class="card">
-      <div class="card-back card-face">
-        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
-      </div>
-      <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/Skull.png" />
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back card-face">
-        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
-      </div>
-      <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/Skull.png" />
+        <img class="card-value" src="./Assets/Images/justice.jpeg" />
       </div>
     </div>
 
@@ -322,7 +282,7 @@
         <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
       </div>
       <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/Ghost.png" />
+        <img class="card-value" src="./Assets/Images/lovers.jpeg" />
       </div>
     </div>
     <div class="card">
@@ -330,7 +290,42 @@
         <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
       </div>
       <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/Ghost.png" />
+        <img class="card-value" src="./Assets/Images/lovers.jpeg" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="./Assets/Images/lovers.jpeg" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="./Assets/Images/lovers.jpeg" />
+      </div>
+    </div>
+
+
+
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="./Assets/Images/moon.jpeg" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="./Assets/Images/moon.jpeg" />
       </div>
     </div>
 
@@ -339,7 +334,7 @@
         <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
       </div>
       <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/Bones.png" />
+        <img class="card-value" src="./Assets/Images/moon.jpeg" />
       </div>
     </div>
     <div class="card">
@@ -347,15 +342,166 @@
         <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
       </div>
       <div class="card-front card-face">
-        <img class="card-value" src="./Assets/Images/Bones.png" />
+        <img class="card-value" src="./Assets/Images/moon.jpeg" />
       </div>
     </div>
 
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="./Assets/Images/star.jpeg" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="./Assets/Images/star.jpeg" />
+      </div>
+    </div>
 
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="./Assets/Images/star.jpeg" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="./Assets/Images/star.jpeg" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="./Assets/Images/star.jpeg" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="./Assets/Images/star.jpeg" />
+      </div>
+    </div>
 
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="./Assets/Images/strength.jpeg" />
+      </div>
+    </div>
 
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="./Assets/Images/strength.jpeg" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="./Assets/Images/strength.jpeg" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="./Assets/Images/strength.jpeg" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="./Assets/Images/strength.jpeg" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="./Assets/Images/strength.jpeg" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="./Assets/Images/temperance.jpeg" />
+      </div>
+    </div>
 
-
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="./Assets/Images/temperance.jpeg" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="./Assets/Images/temperance.jpeg" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="./Assets/Images/temperance.jpeg" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="./Assets/Images/temperance.jpeg" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="./Assets/Images/icons8-delivery-time-50.png" />
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="./Assets/Images/temperance.jpeg" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="spider" src="" />
+      </div>
+      <div class="card-front card-face">
+        special card
+      </div>
+    </div>
   </div>
 </body>
 

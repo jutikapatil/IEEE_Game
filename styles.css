@@ -4,7 +4,7 @@
 
 html {
   min-height: 100vh;
-  cursor: url(Assets/Cursors/Ghost.cur), auto;
+  
   font-family: Lunacy;
 }
 
@@ -14,7 +14,7 @@ body {
 }
 
 .page-title {
-  color: #ff6d00;
+  color: #d6b7a0;
   font-family: Creepy, serif;
   font-weight: normal;
   text-align: center;
@@ -35,7 +35,7 @@ body {
 .game-container {
   margin: 50px auto;
   display: grid;
-  grid-template-columns: repeat(6, auto);
+  grid-template-columns: repeat(11, auto);
   grid-gap: 10px;
   justify-content: center;
   perspective: 500px;
@@ -43,9 +43,8 @@ body {
 
 .card {
   position: relative;
-  cursor: url('Assets/Cursors/GhostHover.cur'), auto;
   height: 175px;
-  width: 125px;
+  width: 115px;
 }
 
 .card-face {
@@ -62,7 +61,10 @@ body {
   transition: transform 500ms ease-in-out;
   backface-visibility: hidden;
 }
-
+.card-face img {
+  max-width:145px ;
+  height: 190px;
+}
 .card.visible .card-back {
   transform: rotateY(-180deg);
 }
@@ -77,7 +79,7 @@ body {
 
 .card-back {
   background-color: black;
-  border-color: #ff6d00;
+  border-color: #d6b7a0;
   transform: rotateY(0);
 }
 
@@ -103,9 +105,9 @@ body {
   transform: scale(0.9);
 }
 
-.card-front:hover .card-value {
+/* .card-front:hover .card-value {
   transform: scale(1);
-}
+} */
 
 .card-front {
   background-color: #ffbb89;
@@ -124,7 +126,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: #ff6d00;
+  color: #d6b7a0;
   font-family: Creepy, serif;
   transition: background-color 500ms, font-size 500ms;
 }
@@ -138,7 +140,7 @@ body {
   animation: overlay-grow 500ms forwards;
 }
 
-@keyframes dance {
+/* @keyframes dance {
   0%,
   100% {
     transform: rotate(0);
@@ -149,7 +151,7 @@ body {
   75% {
     transform: rotate(30deg);
   }
-}
+} */
 
 @keyframes overlay-grow {
   from {
@@ -171,4 +173,65 @@ body {
     flex-direction: column;
     align-items: center;
   }
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width: 500px;
+  max-width: 80%;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 0px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 10px 15px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
 }

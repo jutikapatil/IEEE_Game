@@ -5,7 +5,8 @@ class AudioController {
     this.matchSound = new Audio('Assets/Audio/match.wav')
     this.victorySound = new Audio('Assets/Audio/victory.wav')
     this.gameOverSound = new Audio('Assets/Audio/gameOver.wav')
-    this.bgMusic.volume = 0.5
+    this.bgMusic.volume = 0.0
+    this.matchSound.volume =0.0
     this.bgMusic.loop = true
   }
   startMusic() {
@@ -83,7 +84,7 @@ class MixOrMatch {
   flipCard(card) {
     if (this.canFlipCard(card)) {
       this.audioController.flip()
-      this.totalClicks++
+      // this.totalClicks++
       this.ticker.innerText = this.totalClicks
       card.classList.add('visible')
 
@@ -106,8 +107,23 @@ class MixOrMatch {
     this.matchedCards.push(card2)
     card1.classList.add('matched')
     card2.classList.add('matched')
+    /////
+    
+    openModal(modal);
+    var num = Math.floor(Math.random() * arr.length);
+    if(arr.length>0){
+      var que = arr[num];
+      down.innerHTML = que;
+      arr.splice(num, 1); 
+    }
+    else{
+     
+      down.innerHTML = "Congratulations! You have won the game!!!";
+    }
+    
     this.audioController.match()
     if (this.matchedCards.length === this.cardsArray.length) this.victory()
+
   }
   cardMismatch(card1, card2) {
     this.busy = true
@@ -146,7 +162,7 @@ if (document.readyState == 'loading') {
 function ready() {
   let overlays = Array.from(document.getElementsByClassName('overlay-text'))
   let cards = Array.from(document.getElementsByClassName('card'))
-  let game = new MixOrMatch(100, cards)
+  let game = new MixOrMatch(5000, cards)
 
   overlays.forEach((overlay) => {
     overlay.addEventListener('click', () => {
@@ -158,6 +174,62 @@ function ready() {
   cards.forEach((card) => {
     card.addEventListener('click', () => {
       game.flipCard(card)
+      
     })
   })
 }
+
+
+// MODAL (POP UP)
+const openModalButtons = document.querySelectorAll('[data-modal-target]')
+const closeModalButtons = document.querySelectorAll('[data-close-button]')
+const overlay = document.getElementById('overlay')
+
+openModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget)
+    openModal(modal)
+    
+  })
+})
+
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.modal.active')
+  modals.forEach(modal => {
+    closeModal(modal)
+  })
+})
+
+closeModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal')
+    closeModal(modal)
+  })
+})
+
+function openModal(modal) {
+  if (modal == null) return
+  modal.classList.add('active')
+  overlay.classList.add('active')
+}
+
+function closeModal(modal) {
+  if (modal == null) return
+  modal.classList.remove('active')
+  overlay.classList.remove('active')
+}
+
+// set of ques 
+var down = document.getElementById('GFG_DOWN');
+var arr = ["uwuwuwuwu" , "brrrrrrrr" , "Q3","Q4"];
+
+
+// var down = document.getElementById('GFG_DOWN');
+// var arr = ["GFG_1", "GeeksForGeeks",
+//                 "Geeks", "Computer Science Portal"];
+         
+
+// function GFG_Fun() {
+//   down.innerHTML =
+//       arr[Math.floor(Math.random() * arr.length)];
+// }
