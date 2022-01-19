@@ -17,6 +17,8 @@ body {
   color: #d6b7a0;
   font-family: Creepy, serif;
   font-weight: normal;
+  display: block;
+  justify-content: center;
   text-align: center;
   font-size: 6em;
 }

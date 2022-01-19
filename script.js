@@ -119,8 +119,7 @@ class MixOrMatch {
     else{
      
       down.innerHTML = "Congratulations! You have won the game!!!";
-    }
-    
+    }    
     this.audioController.match()
     if (this.matchedCards.length === this.cardsArray.length) this.victory()
 
