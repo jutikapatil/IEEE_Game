@@ -10,7 +10,7 @@ html {
 
 body {
   margin: 0;
-  background: url(./Assets/Images/ezgif.com-gif-maker.gif)
+  background: url(./Assets/Images/ezgif.com-gif-maker.gif) no-repeat center/cover;
 }
 
 .page-title {
