@@ -128,7 +128,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: #d6b7a0;
+  color: #fff;
   font-family: Creepy, serif;
   transition: background-color 500ms, font-size 500ms;
 }
