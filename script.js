@@ -108,7 +108,6 @@ class MixOrMatch {
     card1.classList.add('matched')
     card2.classList.add('matched')
     /////
-    
     openModal(modal);
     var num = Math.floor(Math.random() * arr.length);
     if(arr.length>0){
