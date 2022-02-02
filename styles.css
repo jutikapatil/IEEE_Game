@@ -10,7 +10,7 @@ html {
 
 body {
   margin: 0;
-  background: url(./Assets/Images/ezgif.com-gif-maker.gif) no-repeat center/cover;
+  background: url(./Assets/Images/TGFq41.gif) no-repeat center center/cover;
 }
 
 .page-title {
@@ -219,6 +219,7 @@ body {
 
 .modal-body {
   padding: 10px 15px;
+  font-size: 25px;
 }
 
 #overlay {

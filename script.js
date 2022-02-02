@@ -161,7 +161,7 @@ if (document.readyState == 'loading') {
 function ready() {
   let overlays = Array.from(document.getElementsByClassName('overlay-text'))
   let cards = Array.from(document.getElementsByClassName('card'))
-  let game = new MixOrMatch(5000, cards)
+  let game = new MixOrMatch(8000, cards)
 
   overlays.forEach((overlay) => {
     overlay.addEventListener('click', () => {
@@ -220,7 +220,7 @@ function closeModal(modal) {
 
 // set of ques 
 var down = document.getElementById('GFG_DOWN');
-var arr = ["uwuwuwuwu" , "brrrrrrrr" , "Q3","Q4"];
+var arr = ["The emblem on the flag of the Republic of Tajikistan features a sunrise over mountains below what symbol?" , "How many countries are located in the Southern Hemisphere?" , "River that flows through Grand Canyon","What is the only major city located on two continents?","How many minutes for each degree of longitude does local tim of any place vary from greenwich time?", "The largest island in the world is Greenland. It is an integral part of",            "Which indian player did not bowl or bat but fielded for Pakistan in only one exhibition match in 1987?" , "Which 2 countries hosted the 1956 summer Olympics?","Which player has scored most goals in a single football match and how many?", "What sports did Apollo 14 astronauts Alan shepherd and Edgar Mitchell play on the moon in 1971?" ,"Which 2 countries hosted the 1956 summer Olympics?",          "Who was named president after Abraham Lincoln was assassinated?", "How long did it take to build the Titanic?","During World War I, the Muslim Ottoman government committee organized genocide against which group of people?" ,"Which British archaeologist discovered Tutankhamun’s tomb?" ];
 
 
 // var down = document.getElementById('GFG_DOWN');
