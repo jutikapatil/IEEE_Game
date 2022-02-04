@@ -106,7 +106,6 @@ body {
   transition: transform 100ms ease-in-out;
   transform: scale(0.9);
 }
-
 /* .card-front:hover .card-value {
   transform: scale(1);
 } */
@@ -200,7 +199,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #093e7e;
+  background-color: #000000;
   border-bottom: 1px solid #fff;
 }
 
@@ -224,7 +223,7 @@ body {
   padding: 10px 15px;
   font-size: 25px;
   font-weight: bold;
-  background-color: rgb(44, 91, 88);
+  background-color: #555;
 }
 
 #overlay {
