@@ -186,7 +186,7 @@ body {
   border-radius: 15px;
   z-index: 10;
   color:#fff;
-  height:165px;
+  height:181px;
   width: 500px;
   max-width: 100%;
 }
@@ -224,12 +224,12 @@ body {
 }
 
 .modal-body {
-  padding: 10px 15px;
-  font-size: 30px;
+  padding: 5px 15px;
+  font-size: 28px;
   font-weight: bold;
   background-color: #555;
   border-radius: 15px;
-  height: 122px;
+  height: 140px;
 }
 
 #overlay {
