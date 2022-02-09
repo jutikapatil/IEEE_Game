@@ -220,12 +220,12 @@ function closeModal(modal) {
 // set of ques 
 var down = document.getElementById('GFG_DOWN');
 var arr = ["One nibble is equivalent to how many bits?" , "What is the name of the oldest programming language still in use" , "Where was the world wide web invented?",
-"The largest island in the world is Greenland. It is an integral part of?","How many minutes for each degree of longitude does local time of any place vary from greenwich time?", 
+"The largest island in the world is Greenland. It is an integral part of?","How many minutes for each degree of longitude does local time of any place vary from Greenwich time?", 
  "In fireworks, the green flame is produced because of" , "What does an airbag, used for the safety of a car driver, contain?",
  "Anne Frank’s diary was edited after her death. Who did it?" ,  "What happens when some charge is placed on a soap bubble?", 
  "The outermost layer of the sun is called","Name a jovian planet." ,"Entomology is the science that studies" ,
    "Firewall in computer is used for", "1024 bit is equal to how many byte","The gas usually filled in the electric bulb is","The inert gas which is substituted for nitrogen in the air used by deep sea divers for breathing, is","What will be the result when seven times of 15 is subtracted from 119 ?", "Who was the first Indian Scientist to win a Nobel Prize?",
-    "The amount of time light takes to reach the earth’s surface from the sun is"," Hydroscope is an instrument that used to","Receptors used to detect taste are known as","Which substance is used in the preservation of food stuff?", "What is the temperature at which both the Fahrenheit and the centigrade scales have the same value?"];
+    "The amount of time light takes to reach the earth’s surface from the sun is"," Hydroscope is an instrument that used to","Receptors used to detect taste are known as","Which substance is used in the preservation of food stuff?", "What is the temperature at which both the Fahrenheit and the centigrade scales have the same value?","Which Noble Gas is also known as ‘Stranger Gas’?"];
 
 
 // var down = document.getElementById('GFG_DOWN');
